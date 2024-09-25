@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant App Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>App Idea Generator</h1>
+        <div class="input-section">
+            <input type="text" id="appIdea" placeholder="Enter your app idea (e.g. build a calculator app)">
+            <button id="generateButton">Generate Code</button>
+        </div>
+        <div class="output-section">
+            <div class="code-output">
+                <h3>Generated Code</h3>
+                <pre id="codeDisplay">Your generated code will appear here...</pre>
+            </div>
+            <div class="app-preview">
+                <h3>App Preview</h3>
+                <iframe id="appPreview" sandbox="allow-scripts"></iframe>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
