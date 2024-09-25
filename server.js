@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch'); // For making HTTP requests
-require('dotenv').config(); // Load environment variables from .env
+require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
 app.use(bodyParser.json());
@@ -9,7 +9,7 @@ app.use(express.static('public')); // Serves your HTML, CSS, and JS from the pub
 
 // OpenAI API configuration
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions'; // OpenAI API endpoint
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Use environment variable
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Your OpenAI API key from environment variable
 
 app.post('/generate', async (req, res) => {
     const { idea } = req.body; // Get the idea from the frontend
